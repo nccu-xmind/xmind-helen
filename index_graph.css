@@ -1,0 +1,104 @@
+/*
+CSE 190 M, Spring 2009, Marty Stepp
+Mobified by Hui-Yin Wu
+26 April 2009
+CSS Style-Sheet for Homework 4: NerdLuv
+
+*/
+
+/* provided styles */
+
+* {
+	font-size: 12pt;
+	font-family: "Verdana", "Geneva", sans-serif;
+}
+
+body {
+	background-color: white;
+	padding: 1em;
+}
+
+#bannerarea {
+	margin-bottom: 2em;
+}
+
+div {
+	margin-top: 0.5em;
+}
+
+.info {
+	padding-left: 160px;
+}
+
+#main {
+	overflow: hidden;
+	width: 32em;
+}
+
+.match {
+	margin-bottom: 3em;
+}
+
+.name {
+	background-color: #E0E0FF;
+	clear: left;
+}
+
+.name img {
+	width: 150px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 3em;
+}
+
+#seeking {
+	margin-top: 2em;
+}
+
+#w3c {
+	clear: both;
+}
+
+#w3c img {
+	border-width: 0px;
+}
+
+
+/* your additional styles go here */
+
+
+#bannerarea{
+	margin-top:auto;
+}
+
+fieldset{
+	border:2px gray outset;
+	background-color: #E0E0FF;
+}
+
+form strong{
+	float: left;
+	width: 11em;
+}
+
+input, select{
+	border:2px gray outset;
+}
+
+
+#main{
+	margin-top: 0;
+	margin-left:0.5em;
+}
+
+#signup{
+	background-color:#FFAAAA;
+	font-size: 120%;
+}
+
+legend{
+	border:2px gray outset;
+	padding: 0.2em;
+	background-color: white;
+}
+

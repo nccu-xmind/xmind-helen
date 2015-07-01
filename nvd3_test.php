@@ -16,13 +16,12 @@ if ($check_count_num_rows < 1) {
     $user = $modify_userid_array['gaccount'];
 }
 
-$sql = "SELECT FROM_UNIXTIME(`Time_Stamp`,'" . $time_int . "') AS 'MyTime',CAST(FROM_UNIXTIME(`Time_Stamp`,'%Y') AS CHAR) AS 'MyYear',CAST(FROM_UNIXTIME(`Time_Stamp`,'%m') AS CHAR) AS 'MyMonth',CAST(FROM_UNIXTIME(`Time_Stamp`,'%d') AS CHAR) AS 'MyDay',COUNT(*) AS 'Counts',`title` AS 'App_Name'
-FROM activitylogs JOIN info_pkg ON `Name_App` = `pkgName`
+$sql = "SELECT FROM_UNIXTIME(`Time_Stamp`,'" . $time_int . "') AS 'MyTime',CAST(FROM_UNIXTIME(`Time_Stamp`,'%Y') AS CHAR) AS 'MyYear',CAST(FROM_UNIXTIME(`Time_Stamp`,'%m') AS CHAR) AS 'MyMonth',CAST(FROM_UNIXTIME(`Time_Stamp`,'%d') AS CHAR) AS 'MyDay',COUNT(*) AS 'Counts',`appname` AS 'App_Name'
+FROM `activitylogs` JOIN `info_pkg` ON `Name_App` = `pkgName`
 WHERE   `category` LIKE \"$category\" AND activitylogs.`ID_User`= \"$user\"
 GROUP BY `MyTime`, `Name_App`
 HAVING `MyTime`>\"$last_time\"";
 
-echo $sql;
 //$sql2="SELECT  COUNT(*) AS 'Counts',`category` AS 'App_Category'
 //FROM activitylogs JOIN info_pkg JOIN info_user ON CAST(`Name_App` AS CHAR) = `pkgName` AND CAST(`gaccount` AS CHAR)= CAST(`ID_User` AS CHAR)
 //WHERE  info_user.`id`= $user

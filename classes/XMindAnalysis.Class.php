@@ -3,8 +3,12 @@
 
 /**
  * Description of XMindAnalysis
+ * Xmind 資料分析類別
  *
- * @author jeffy
+ * @author ninthday <bee.me@ninthday.info>
+ * @since version 1.0 2015-07-01
+ * @copyright (c) 2015, ninthday
+ * 
  */
 namespace ninthday\xmind;
 
@@ -21,6 +25,14 @@ class XMindAnalysis
         $this->dbh = $pdoConn->dbh;
     }
     
+    /**
+     * 取得目前所有的應用程式分類清單，依照每個類別中的應用程式數量多寡降冪
+     * 
+     * @return array ['category']：分類，[CNT]：應用程式數
+     * @throws \Exception
+     * @since version 1.0
+     * @access public
+     */
     public function getAppCateList(){
         $ary_rtn = array();
         $sql = 'SELECT `category`, COUNT(*) AS `CNT` FROM `info_pkg` WHERE `category` != \'Unknow\''
@@ -41,6 +53,14 @@ class XMindAnalysis
         return $ary_rtn;
     }
     
+    /**
+     * 取得編碼後的使用者清單（不包含開發者）
+     * 
+     * @return array 使用者清單
+     * @throws \Exception
+     * @since version 1.0
+     * @access public
+     */
     public function getEncodeUserList()
     {
         $ary_rtn = array();

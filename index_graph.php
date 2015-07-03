@@ -18,6 +18,7 @@ try {
 
 <html>
     <head>
+        <meta charset="UTF-8"/>
         <title>X-Mind Graphing Tool Demo</title>
         <link href="index_graph.css" type="text/css" rel="stylesheet" />
     </head>

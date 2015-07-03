@@ -22,6 +22,7 @@ WHERE   `category` LIKE \"$category\" AND activitylogs.`ID_User`= \"$user\"
 GROUP BY `MyTime`, `Name_App`
 HAVING `MyTime`>\"$last_time\"";
 
+echo $sql;
 //$sql2="SELECT  COUNT(*) AS 'Counts',`category` AS 'App_Category'
 //FROM activitylogs JOIN info_pkg JOIN info_user ON CAST(`Name_App` AS CHAR) = `pkgName` AND CAST(`gaccount` AS CHAR)= CAST(`ID_User` AS CHAR)
 //WHERE  info_user.`id`= $user

@@ -72,6 +72,15 @@ try {
                     <option value=".activity.messages.MessageComposeActivity">Sending Message</option>
                 </select>
                 <br/>
+                <label>User: </label><select name="user_id">
+                    <option value="" selected ="selected">Please Select</option>
+                    <?php
+                    foreach ($ary_userlist as $user) {
+                        echo '<option value="' . $user . '">' . $user . '</option>';
+                    }
+                    ?>
+                </select>
+                <br/>
                 <select name="time_int">
                     <option value="%Y-%m">By Month</option>
                     <option value="%Y-%m-%d">By Day</option>

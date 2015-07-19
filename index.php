@@ -91,6 +91,7 @@ try {
         </form>
         <p>Revisions:
             <ul>
+                <li>2015-07-19: App with unique color and click graph to show logs. (@JeffyShih)</li>
                 <li>2015-07-11: Graph Tools back to HighChart (@JeffyShih)</li>
                 <li>2015-07-01: Category & User List, Get from Database (@JeffyShih)</li>
                 <li>2013-07-07: New Users Added, User ID Update</li>
